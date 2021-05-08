@@ -16,6 +16,8 @@ public class Displacement {
         this.dateOrigin = dateOrigin;
         this.dateDestiny = dateDestiny;
     }
+    public Displacement() {
+    }
 
     public String getCarPlate() {
         return carPlate;

@@ -14,6 +14,8 @@ public class Driver {
         this.id = id;
         this.name = name;
     }
+    public Driver() {
+    }
 
     public String getId() {
         return id;

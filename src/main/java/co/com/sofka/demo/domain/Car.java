@@ -8,14 +8,18 @@ public class Car {
     private String plate;
 
     private String brand;
-    private Integer Modelo;
+    private Integer Model;
     private Driver driver;
 
-    public Car(String plate, String brand, Integer modelo, Driver driver) {
+    public Car(String plate, String brand, Integer model, Driver driver) {
         this.plate = plate;
         this.brand = brand;
-        Modelo = modelo;
+        Model = model;
         this.driver = driver;
+    }
+
+    public Car() {
+
     }
 
     public String getPlate() {
@@ -34,12 +38,12 @@ public class Car {
         this.brand = brand;
     }
 
-    public Integer getModelo() {
-        return Modelo;
+    public Integer getModel() {
+        return Model;
     }
 
-    public void setModelo(Integer modelo) {
-        Modelo = modelo;
+    public void setModel(Integer model) {
+        Model = model;
     }
 
     public Driver getDriver() {
