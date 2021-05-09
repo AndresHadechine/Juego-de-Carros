@@ -21,10 +21,8 @@ public class Services {
 
     public Mono<DTOCar> save(DTOCar carDTO) {
         repository.findAll().filter(x -> x.getPlate() == carDTO.getPlate());
-        {
             repository.deleteById(carDTO.getPlate());
             return repository.save(carDTO);
-        }
     }
     public Mono<Void> delete (String place){
         return repository.deleteById(place);
