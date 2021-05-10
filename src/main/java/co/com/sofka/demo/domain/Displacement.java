@@ -1,8 +1,11 @@
 package co.com.sofka.demo.domain;
 
+import org.springframework.data.annotation.Id;
+
 public class Displacement {
 
-   private String carPlate;
+    @Id
+    private String carPlate;
 
     private String origin;
     private String destiny;
@@ -16,6 +19,7 @@ public class Displacement {
         this.dateOrigin = dateOrigin;
         this.dateDestiny = dateDestiny;
     }
+
     public Displacement() {
     }
 
