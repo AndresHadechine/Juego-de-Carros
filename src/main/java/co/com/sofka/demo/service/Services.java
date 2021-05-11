@@ -42,11 +42,12 @@ public class Services {
         return repository.deleteById(place);
     }
 
-    public Flux<Displacement> ListDisplacementCar(){
-        return repositoryDisplacement.findAll();
+    public Flux<Displacement> ListDisplacementCar(String carPlate){
+        return repositoryDisplacement.findAll().filter(displacement -> displacement.getCarPlate().contains(carPlate));
     }
 
     public Mono<DTODisplacement>saveDisplacement(DTODisplacement displacementDTO){
+            displacementDTO.setCarPlate(displacementDTO.getCarPlate()+Math.random()*1000000+1);
             return repositoryDisplacement.save(Objects.requireNonNull(displacementDTO));
     }
 

@@ -38,9 +38,9 @@ public class Controller {
         return service.delete(plate);
     }
 
-    @GetMapping(value= "/ListDisplacementCar")
-    public Flux<Displacement> list2(){
-        return service.ListDisplacementCar();
+    @GetMapping(value= "/ListDisplacementCar/{carPlate}")
+    public Flux<Displacement> list2(@PathVariable("carPlate") String carPlate){
+        return service.ListDisplacementCar(carPlate);
     }
 
     @PostMapping(value = "/saveDisplacement")
