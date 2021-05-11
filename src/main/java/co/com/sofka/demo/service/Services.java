@@ -42,8 +42,8 @@ public class Services {
         return repository.deleteById(place);
     }
 
-    public Flux<Displacement> ListDisplacementCar(String carPlate){
-        return repositoryDisplacement.findAllById(Collections.singleton(carPlate));
+    public Flux<Displacement> ListDisplacementCar(){
+        return repositoryDisplacement.findAll();
     }
 
     public Mono<DTODisplacement>saveDisplacement(DTODisplacement displacementDTO){

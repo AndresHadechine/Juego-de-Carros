@@ -1,7 +1,9 @@
 package co.com.sofka.demo.controller;
 
 import co.com.sofka.demo.domain.Car;
+import co.com.sofka.demo.domain.Displacement;
 import co.com.sofka.demo.dto.DTOCar;
+import co.com.sofka.demo.dto.DTODisplacement;
 import co.com.sofka.demo.service.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -36,5 +38,14 @@ public class Controller {
         return service.delete(plate);
     }
 
+    @GetMapping(value= "/ListDisplacementCar")
+    public Flux<Displacement> list2(){
+        return service.ListDisplacementCar();
+    }
+
+    @PostMapping(value = "/saveDisplacement")
+    public Mono<DTODisplacement> saveDisplacement(@RequestBody DTODisplacement displacementDTO){
+        return service.saveDisplacement(displacementDTO);
+    }
 }
 
